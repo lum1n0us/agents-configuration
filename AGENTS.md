@@ -33,7 +33,7 @@ These rules apply to every repository unless overridden by a project-level `AGEN
 
 In repositories indexed by CodeGraph (a `.codegraph/` directory exists at the repo root), reach for it BEFORE grep/find or reading files when you need to understand or locate code:
 
-- **MCP tool** (when available): `codegraph_explore` answers most code questions in one call — the relevant symbols' verbatim source plus the call paths between them. Always pass `projectPath` (a directory at or below the repo root holding `.codegraph/`); the server has no default project.
+- **MCP tool** (when available): `codegraph_explore` answers most code questions in one call — the relevant symbols' verbatim source plus the call paths between them. `projectPath` is optional: pass it (a directory at or below the repo root holding `.codegraph/`) only when the tool reports it cannot find a project.
 - **Shell** (always works): `codegraph explore "<symbol names or question>"` prints the same output, and `codegraph node <symbol-or-file>` returns one symbol's source + callers, or a whole file with line numbers. The `codegraph_node` MCP tool is not always exposed — use the shell form for single-symbol lookups.
 
 If there is no `.codegraph/` directory, skip CodeGraph entirely — indexing is the user's decision.
