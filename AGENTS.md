@@ -1,10 +1,6 @@
 # Global Baseline for All Projects
 
-These rules apply to every repository unless overridden by a project-level `AGENTS.md`.
-
-## Priorities (highest to lowest)
-1. Project-level `AGENTS.md` (cascades and overrides these rules)
-2. This global baseline
+These rules apply to every repository.
 
 ## Interaction Style
 - Respond in **Chinese**.
@@ -16,7 +12,6 @@ These rules apply to every repository unless overridden by a project-level `AGEN
 
 ## Core Workflow
 - Before starting, state a brief execution plan.
-- Read a file before editing it.
 - Stop and ask if anything is unclear.
 - Do not modify unrelated code or perform "drive-by" refactors.
 - Do not revert changes unrelated to the current task.
@@ -30,11 +25,5 @@ These rules apply to every repository unless overridden by a project-level `AGEN
 
 <!-- CODEGRAPH_START -->
 ## CodeGraph
-
-In repositories indexed by CodeGraph (a `.codegraph/` directory exists at the repo root), reach for it BEFORE grep/find or reading files when you need to understand or locate code:
-
-- **MCP tool** (when available): `codegraph_explore` answers most code questions in one call — the relevant symbols' verbatim source plus the call paths between them. `projectPath` is optional: pass it (a directory at or below the repo root holding `.codegraph/`) only when the tool reports it cannot find a project.
-- **Shell** (always works): `codegraph explore "<symbol names or question>"` prints the same output, and `codegraph node <symbol-or-file>` returns one symbol's source + callers, or a whole file with line numbers. The `codegraph_node` MCP tool is not always exposed — use the shell form for single-symbol lookups.
-
-If there is no `.codegraph/` directory, skip CodeGraph entirely — indexing is the user's decision.
+If `.codegraph/` exists at the repo root, use `codegraph_explore` (MCP, always pass `projectPath`) or shell `codegraph explore "<query>"` / `codegraph node <symbol-or-file>` BEFORE grep/find or reading files. Otherwise skip it.
 <!-- CODEGRAPH_END -->
