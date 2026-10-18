@@ -3,12 +3,26 @@
 These rules apply to every repository.
 
 ## Interaction Style
-- Respond in **Chinese**.
+- Respond in **Chinese** — but keep technical terms, API/library/product names, and community-standard English phrasing in English; do not force translations (see Chinese Writing).
 - Be concise and direct: omit pleasantries, focus on the core answer.
 - For lengthy outputs (typically >10 lines of reasoning/code), write to a file instead of dumping content inline.
   - **Directory**: Save to `.docs/` under the current project/workspace root. Create `.docs/` if it does not exist.
   - **Naming**: Use `.docs/<yyyy-mm-dd>-<topic>.md` as the file path (e.g., `.docs/2026-08-08-auth-flow.md`).
   - **Output**: Show only the file path and a 1-line summary in the conversation.
+
+## Chinese Writing
+
+Chinese-primary mixed language: Chinese prose, English for what English names better. Covers every Chinese output; not creative or marketing copy.
+
+- **Keep the ecosystem's English** — terms, API/product names, community phrasing and idioms stay English ("race condition", "LGTM"); never force a translation.
+- **One term per thing** — one *form* per thing; no synonyms, no 中英 alternation ("race condition" ≠ "竞态条件").
+- **One idea per sentence; one topic per paragraph** — list 3+ steps or conditions.
+- **Verb over nominalization** — "对日志进行分析" → "分析日志".
+- **Preserve meaning** — no hedge becomes a fact ("可能已失败" ↛ "失败"); add no fact or cause; drop no condition, scope or number.
+- **No marketing adjectives** — 无缝/强大/极致/前沿/流畅.
+- **Rewrite tasks: text only** — no preamble, summary or closing offer; one `保留原样:` line if longer wording was kept.
+
+Details, examples, length caps, process: `~/agents/docs/zh-writing.md`.
 
 ## Core Workflow
 - Before starting, state a brief execution plan.
