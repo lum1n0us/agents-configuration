@@ -70,10 +70,10 @@ cd tests/unit/
 rm -rf build && mkdir build
 for mode in classic-interp aot; do
   case ${mode} in
-    classic-interp) flags="-DWAMR_BUILD_INTERP=1 -DWAMR_BUILD_FAST_INTERP=0 -DWAMR_BUILD_JIT=0 -DWAMR_BUILD_AOT=0" ;;
-    fast-interp)    flags="-DWAMR_BUILD_INTERP=1 -DWAMR_BUILD_FAST_INTERP=1 -DWAMR_BUILD_JIT=0 -DWAMR_BUILD_AOT=0" ;;
-    jit)            flags="-DWAMR_BUILD_INTERP=0 -DWAMR_BUILD_FAST_INTERP=0 -DWAMR_BUILD_JIT=1 -DWAMR_BUILD_AOT=0 -DWAMR_BUILD_FAST_JIT=0" ;;
-    aot)            flags="-DWAMR_BUILD_INTERP=0 -DWAMR_BUILD_FAST_INTERP=0 -DWAMR_BUILD_JIT=0 -DWAMR_BUILD_AOT=1" ;;
+    classic-interp) flags="" ;;
+    fast-interp)    flags="-DWAMR_BUILD_INTERP=1 -DWAMR_BUILD_FAST_INTERP=1" ;;
+    jit)            flags="-DWAMR_BUILD_JIT=1" ;;
+    aot)            flags="-DWAMR_BUILD_AOT=1" ;;
   esac
   cmake -S . -B build/${mode} -DWAMR_BUILD_TARGET=X86_64 ${flags} 2>&1 | tee build/unit_${mode}_cmake.log || exit 1
   cmake --build build/${mode}                        2>&1 | tee -a build/unit_${mode}_cmake.log || exit 1
