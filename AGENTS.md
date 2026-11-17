@@ -17,12 +17,14 @@ Chinese-primary mixed language: Chinese prose, English for what English names be
 - **Keep the ecosystem's English** — terms, API/product names, community phrasing and idioms stay English ("race condition", "LGTM"); never force a translation.
 - **One term per thing** — one *form* per thing; no synonyms, no 中英 alternation ("race condition" ≠ "竞态条件").
 - **One idea per sentence; one topic per paragraph** — list 3+ steps or conditions.
+- **Steps are imperative, one action each** — "运行 `make test`", not "需要运行测试"; cap sentence length (soft, see details).
+- **Warning before the step** — state the danger and consequence first, then the step it applies to.
 - **Verb over nominalization** — "对日志进行分析" → "分析日志".
 - **Preserve meaning** — no hedge becomes a fact ("可能已失败" ↛ "失败"); add no fact or cause; drop no condition, scope or number.
 - **No marketing adjectives** — 无缝/强大/极致/前沿/流畅.
 - **Rewrite tasks: text only** — no preamble, summary or closing offer; one `保留原样:` line if longer wording was kept.
 
-Details, examples, length caps, process: `~/agents/docs/zh-writing.md`.
+Details, examples, length caps, process: `~/.agents/docs/zh-writing.md`.
 
 ## Core Workflow
 - Before starting, state a brief execution plan.
