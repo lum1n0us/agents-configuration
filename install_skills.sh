@@ -11,11 +11,9 @@ readonly AGENT_FLAGS=(--agent claude-code --agent github-copilot)
 
 # "<repo-url> <skill> [<skill>...]"
 readonly PACKAGES=(
-  "https://github.com/mattpocock/skills code-review grill-me grill-with-docs grilling domain-modeling"
-  "https://github.com/juliusbrussee/caveman caveman-commit caveman"
+  "https://github.com/mattpocock/skills grill-me grill-with-docs grilling domain-modeling"
   "https://github.com/humanlayer/skills show-me"
   "https://github.com/ayghri/i-have-adhd i-have-adhd"
-  "https://github.com/brianlovin/agent-config simplify"
   "https://github.com/danyuchn/asd-ste100-skill asd-ste100"
 )
 

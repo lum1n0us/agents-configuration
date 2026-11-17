@@ -9,6 +9,7 @@ These rules apply to every repository.
   - **Directory**: Save to `.docs/` under the current project/workspace root. Create `.docs/` if it does not exist.
   - **Naming**: Use `.docs/<yyyy-mm-dd>-<topic>.md` as the file path (e.g., `.docs/2026-08-08-auth-flow.md`).
   - **Output**: Show only the file path and a 1-line summary in the conversation.
+  - **Exception**: interactive questions and diagrams stay inline.
 
 ## Chinese Writing
 
@@ -23,6 +24,8 @@ Chinese-primary mixed language: Chinese prose, English for what English names be
 - **Preserve meaning** — no hedge becomes a fact ("可能已失败" ↛ "失败"); add no fact or cause; drop no condition, scope or number.
 - **No marketing adjectives** — 无缝/强大/极致/前沿/流畅.
 - **Rewrite tasks: text only** — no preamble, summary or closing offer; one `保留原样:` line if longer wording was kept.
+
+For Chinese text, follow these rules, not the `asd-ste100` skill (English only).
 
 Details, examples, length caps, process: `~/.agents/docs/zh-writing.md`.
 
